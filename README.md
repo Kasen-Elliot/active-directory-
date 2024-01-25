@@ -34,17 +34,16 @@ This lab demonstrates how to install and configure Active Directory using Azure.
   <ul>
     <li>Our Client VM should be installed normally using the Windows 10 image (OS)</li>
     <ul>
-      <li>Tutorial on how to install VMs and to access them using Remote Desktop can be found <b><a href ="https://github.com/ColtonTrauCC/vm-network">here</a></b></li>
     </ul>      
     <li>Our Domain Controller VM using Active Directory should be created using the image <b>Windows Server 2022 Datacenter: Azure Edition - x64 Gen2</b></li>
     <ul>
-      <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/2ba43657-9799-46d3-9140-c9952282614e" height="80%" width="80%"/></li>
+      <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/65a8d95d-68ff-47be-839d-f28a7fd415f8" height="80%" width="80%"/></li>
     </ul>
     <li>After the VMs are created, we'll set the Domain Controller's IP Address as <i>static</i> since having it dynamic will make them difficult for the VM to communicate with our client VM.</li>
     <li>Go to your Virtual Machines in Azure and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>IP Configurations</b> under <b>settings</b>, go to the ipconfig link to open up a window to toggle the IP configuration and allocation to <b>Static</b>.</li>
     <ul>
       <li>IP Configuration for the Domain VM</li>
-      <li><img src="https://github.com/ColtonTrauCC/active-directory/assets/147654000/f9883539-f1b2-4ada-80d9-2e0df6c2de6d" height="80%" width="80%"/></li>
+      <li><img src="https://github.com/Kasen-Elliot/active-directory-/assets/127895952/aab682ab-1510-4e9e-9461-108435db029a" height="80%" width="80%"/></li>
     </ul>
   </ul>
 </p>
@@ -57,15 +56,15 @@ This lab demonstrates how to install and configure Active Directory using Azure.
   <ul>
     <li>Logging in to the Client VM, open the Command Prompt and enter the command <b>ping [Domain Controller Private IP Address] -t</b> to endlessly send ping in order ensure reachability with the Domain Controller. Connection should time out after the first ping due to the Domain Controller's Firewall Settings.</li>
     <ul>
-      <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/be2faa69-d835-4222-a105-b6f5201c018f" height = 80% width = 80% /></li>
+      <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/180eaae3-623c-4288-9d40-29208f77db2c" height = 80% width = 80% /></li>
     </ul>
     <li>Logging into the Domain Controller VM, go to the <b>Windows Defender Firewall with Advanced Security</b>. Head to the <b>Inbound Rules</b> and enable the rules under the protocol <b>ICMPv4</b>, specifically <i>Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)</i></li>
     <ul>
-	<li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/63bef2fe-62b6-4230-aac2-d6528f038bc5" height = 80% width = 80% /></li>
+	<li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/b85f5e2d-0305-462b-b495-1f747e8295ee" height = 80% width = 80% /></li>
     </ul>
     <li>Head back to the Client VM, and we should now be seeing replies</li>
     <ul>
-	<li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/0918e56e-4fe8-497e-aa05-e9e4b3139042" height = 80% width = 80% /></li>
+	<li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/c8c72ce4-cbac-4cc8-94e9-fe157f10b5ee" height = 80% width = 80% /></li>
     </ul>
   </ul>
 </p>
@@ -78,12 +77,12 @@ This lab demonstrates how to install and configure Active Directory using Azure.
   <ul>
 	  <li>In your Domain Controller VM, go to the Server Manager Dashboard and click on <b>Add Roles and Features</b>. Go through the installation process and upon getting to <b>Server Roles</b>, make sure to check the box for <b>Active Directory Domain Services</b></li>
 	  <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/0b835d58-c357-40ce-a759-a0770c7929c9" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/6ee20482-83b4-4fa2-b1d5-41d1e2b6a399" height = 80% width = 80% /></li>
 	  </ul>
 	 <li>Once installed, we now have to promote the server into a domain controller. To do so, you may notice a <b>warning notification</b> on the top right where the flag icon is. Click on that flag and click <b>Promote this server to a domain controller</b>. Click on Add a new forest and specify a domain name. For this tutorial, we'll name the domain <b>mydomain.com</b>, specifiy the password, and proceed with the install. Noted, you will be automatically signed out, re-log in through Remote Desktop, and installation is fully completed!</li>
 	  <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/af0fb9e9-2f55-4fb0-a372-487d2dab317e" height = 80% width = 80% /></li>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/fb6b02e1-2e22-4147-aede-1d126c634ec8" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/704249d1-0034-4814-a9ef-eb83da0784c6" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/0cdb336f-54d8-484b-8874-2caf1e04324c" height = 80% width = 80% /></li>
     	 </ul>
   </ul>
 </p>
@@ -114,11 +113,12 @@ This lab demonstrates how to install and configure Active Directory using Azure.
 	  </ul>
     <li>In the _ADMIN OU, we'll create the user <b>Jane Doe</b> with the user name <b>jane_admin</b> and password of your creation</li>
     <ul>
-	<li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/8ab7e7b5-b5c4-4da6-b748-03d452778879" height = 80% width = 80% /></li>
+	<li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/c92c488e-f5d2-4fd2-a2fe-f1c40c95063e" height = 80% width = 80% /></li>
     </ul>
     <li>We'll be granting Jane admin privileges. Using the <b>Security Group</b>, right click on the user and open their <b>Properties</b>. Click Member Of then Add to apply the appropraite security group.</li>
     <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/e926f68b-be89-40f5-a294-b479602f9869" height = 80% width = 80% /></li>
+	    <li><img src = "![ad12](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/5ed21220-0aa6-41b2-a730-dc8ce3fe72d3)
+" height = 80% width = 80% /></li>
     </ul>
     <li>Now, the user Jane will be used to log in from here on, using the login username jane_admin.</li>
   </ul>
@@ -132,16 +132,19 @@ This lab demonstrates how to install and configure Active Directory using Azure.
   <ul>
     <li>First, we need to configure the Domain Name System (DNS) server. Go to your Client VM in the Azure Portal and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>DNS Servers</b> under <b>settings</b>, and set the DNS Server to <b>Custom</b>. Then, enter the Domain Controller's private IP address and save the changes. Restart the client VM in order to ensure the DNS changes are saved.</li>
     <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/09ba39f8-0e5c-4d64-b276-ab10af8a0efd" height = 80% width = 80% /></li>
+	    <li><img src = "![ad13](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/d5dc468d-0dd6-4d2e-a59a-fe367f856234)
+" height = 80% width = 80% /></li>
     </ul>
     <li>In the System menu of the client VM, click on Rename this PC (advanced) and Change.</li>
     <li>Enter the domain and necessary credentials in order to let the client join the domain (logging in as jane_admin). It is important to note that the login credentials have to be input within the context of the domain path (mydomain.com\jane_admin).</li>
     <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/49ec7774-3dd4-4c62-81fe-91da91d80d08" height = 80% width = 80% /></li>
+	    <li><img src = "![ad14](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/4797e969-30de-4638-b501-6eae52fd9104)
+" height = 80% width = 80% /></li>
     </ul>
     <li>The client should now be part of the domain (A popup should appear welcoming you to the domain). On the domain controller, the client should now appear in Computers in the Active Directory Users and Computers panel.</li>
     <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/a8ef09bf-36e2-4aab-8c44-d99d7b3fcb7a" height = 80% width = 80% /></li>
+	    <li><img src = "![ad15](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/82f5f5f1-d824-42fb-9f3d-18bf2b9d0584)
+" height = 80% width = 80% /></li>
     </ul>  
   </ul>
 </p>
@@ -156,7 +159,8 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     <li>While logged in as the administrator (jane_admin), open <b>System Properties</b>. Click on <b>Remote Desktop</b> and Select users that can remotely access this PC.</li>  
     <li>Allow Domain Users access to Remote Desktop. Non-administrative users can now log in to the Client.</li>
     <ul>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/96e3a27f-83fd-40c3-86bc-f3532c24bf6b" height = 80% width = 80% /></li>
+	    <li><img src = "![ad16](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/9e9e2e96-3a3e-45c3-9553-b4d69d7c7867)
+" height = 80% width = 80% /></li>
     </ul>
   </ul>
 </p>
