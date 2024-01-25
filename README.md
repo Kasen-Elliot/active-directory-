@@ -117,8 +117,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     </ul>
     <li>We'll be granting Jane admin privileges. Using the <b>Security Group</b>, right click on the user and open their <b>Properties</b>. Click Member Of then Add to apply the appropraite security group.</li>
     <ul>
-	    <li><img src = "![ad12](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/5ed21220-0aa6-41b2-a730-dc8ce3fe72d3)
-" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/5ed21220-0aa6-41b2-a730-dc8ce3fe72d3" height = 80% width = 80% /></li>
     </ul>
     <li>Now, the user Jane will be used to log in from here on, using the login username jane_admin.</li>
   </ul>
@@ -132,19 +131,16 @@ This lab demonstrates how to install and configure Active Directory using Azure.
   <ul>
     <li>First, we need to configure the Domain Name System (DNS) server. Go to your Client VM in the Azure Portal and go to <b>Networking</b> then go to the link listed next to <b>Network Interface</b>. Head to <b>DNS Servers</b> under <b>settings</b>, and set the DNS Server to <b>Custom</b>. Then, enter the Domain Controller's private IP address and save the changes. Restart the client VM in order to ensure the DNS changes are saved.</li>
     <ul>
-	    <li><img src = "![ad13](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/d5dc468d-0dd6-4d2e-a59a-fe367f856234)
-" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/d5dc468d-0dd6-4d2e-a59a-fe367f856234" height = 80% width = 80% /></li>
     </ul>
     <li>In the System menu of the client VM, click on Rename this PC (advanced) and Change.</li>
     <li>Enter the domain and necessary credentials in order to let the client join the domain (logging in as jane_admin). It is important to note that the login credentials have to be input within the context of the domain path (mydomain.com\jane_admin).</li>
     <ul>
-	    <li><img src = "![ad14](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/4797e969-30de-4638-b501-6eae52fd9104)
-" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/4797e969-30de-4638-b501-6eae52fd9104" height = 80% width = 80% /></li>
     </ul>
     <li>The client should now be part of the domain (A popup should appear welcoming you to the domain). On the domain controller, the client should now appear in Computers in the Active Directory Users and Computers panel.</li>
     <ul>
-	    <li><img src = "![ad15](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/82f5f5f1-d824-42fb-9f3d-18bf2b9d0584)
-" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/82f5f5f1-d824-42fb-9f3d-18bf2b9d0584" height = 80% width = 80% /></li>
     </ul>  
   </ul>
 </p>
@@ -159,8 +155,7 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     <li>While logged in as the administrator (jane_admin), open <b>System Properties</b>. Click on <b>Remote Desktop</b> and Select users that can remotely access this PC.</li>  
     <li>Allow Domain Users access to Remote Desktop. Non-administrative users can now log in to the Client.</li>
     <ul>
-	    <li><img src = "![ad16](https://github.com/Kasen-Elliot/active-directory-/assets/127895952/9e9e2e96-3a3e-45c3-9553-b4d69d7c7867)
-" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/9e9e2e96-3a3e-45c3-9553-b4d69d7c7867" height = 80% width = 80% /></li>
     </ul>
   </ul>
 </p>
@@ -176,12 +171,12 @@ This lab demonstrates how to install and configure Active Directory using Azure.
     <li>In Powershell ISE, create a new file and copy-and-paste the powershell script into the file and then run the script</li>
     <ul>
 	    <li>All these users are generated and put into the _EMPLOYEES Organizational Unit in the Active Directory</li>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/0033e7ae-6446-46d1-ae13-3873d475e8ac" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/89730bc5-b553-4634-a15d-73d0e447991c" height = 80% width = 80% /></li>
     </ul>
     <li>Head to the Active Directory Users and Computers console and select a random username and obtain their login information by going to <b>Properties</b> and in the <b>Account</b> tab</li>
     <ul>
 	    <li>The username generate should appear as <b>[first name].[last name]</b>, in this image the user is selecting "falojo.kugori"</li>
-	    <li><img src = "https://github.com/ColtonTrauCC/active-directory/assets/147654000/569cac00-65bf-4315-be16-6f502fb44b49" height = 80% width = 80% /></li>
+	    <li><img src = "https://github.com/Kasen-Elliot/active-directory-/assets/127895952/896088c9-276f-4c14-8dff-bd800fc2e81b" height = 80% width = 80% /></li>
     </ul>
     <li>Attempt to log in the Client VM using the generate username you have selected (username being <b>mydomain.com\username</b>) and the password "Password1"</li>
   </ul>
